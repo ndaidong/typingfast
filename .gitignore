@@ -1,23 +1,8 @@
-# Logs
-logs
-*.log
-*.debug
-
-# Runtime data
-*.pid
-*.seed
-
 node_modules
 coverage
-.nyc_output
-
-storage
-dist
-src/vendor
-
-yarn.lock
-coverage.lcov
-package-lock.json
+pnpm-workspace.yaml
 pnpm-lock.yaml
+bun.lock
+lcov.info
 
-.nuxt
+dist

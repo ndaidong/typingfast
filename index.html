@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FastTyping - Simple web app for typing practice">
+    <meta property="keywords" content="FastTyping, typing method, 10 fingers, FastTyping WebApp" />
+    <meta property="og:site_name" content="FastTyping">
+    <meta property="og:url" content="https://typingfast.vercel.com">
+    <meta property="og:title" content="FastTyping WebApp">
+    <meta property="og:description" content="FastTyping - Simple web app for typing practice">
+    <meta property="og:image" content="https://typingfast.vercel.com/fast_typing_funny.jpg">
+    <meta property="og:creator" content="@ndaidong">
+    <meta property="twitter:site" content="FastTyping">
+    <meta property="twitter:url" content="https://typingfast.vercel.com">
+    <meta property="twitter:title" content="FastTyping WebApp">
+    <meta property="twitter:description" content="FastTyping - Simple web app for typing practice">
+    <meta property="twitter:image" content="https://typingfast.vercel.com/fast_typing_funny.jpg">
+    <meta property="twitter:creator" content="@ndaidong">
+    <link rel="icon" type="image/png" href="/favicon_16x16.png">
+    <title>FastTyping WebApp</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1 class="header__title">FastTyping</h1>
+        <i id="butSetting" title="Settings" class="icon icon-settings"></i>
+      </header>
+
+      <main class="main">
+        <div class="card" id="summary" data-module="summary">
+          <div class="line">
+            <label>Recently: </label>
+            <span class="section">
+              <span class="number" id="numSpeed"></span> wpm
+            </span>
+            <span class="section">
+              <span class="number" id="numMistake"></span> <span id="txtMistake"></span>
+            </span>
+            <span class="section">
+              <span class="number" id="numScore"></span> <span id="txtScore"></span>
+            </span>
+          </div>
+          <div class="line older">
+            <label>Highest record: </label>
+            <span class="section">
+              <span class="number" id="numHrSpeed"></span> wpm
+            </span>
+            <span class="section">
+              <span class="number" id="numHrMistake"></span> <span id="txtHrMistake"></span>
+            </span>
+            <span class="section">
+              <span class="number" id="numHrScore"></span> <span id="txtHrScore"></span>
+            </span>
+          </div>
+        </div>
+        <div class="card" id="textpad" data-module="textpad" tabindex="-1">
+          <div id="typingArea" class="text-area"></div>
+        </div>
+
+        <div class ="card hide">
+          <h3>7 Rules to Master 10-Finger Typing:</h3>
+          <ol>
+            <li><b>Home Row Start:</b> fingers on <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>, <kbd>F</kbd> and <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>;</kbd>
+            <li><b>Fixed Hands, Move Fingers:</b> no hand/wrist movement
+            <li><b>Designated Fingers:</b> each finger has specific keys
+            <li><b>Eyes on Screen:</b> don't look at the keyboard
+            <li><b>Return to Home Row:</b> go back quickly after each key
+            <li><b>Slow to Fast:</b> prioritize accuracy over speed initially
+            <li><b>Regular Practice:</b> key to speed and accuracy
+          </ol>
+        </div>
+
+        <div class ="card sharing">
+          <label>Love this? Share on:</label>
+          <a href="https://twitter.com/intent/tweet?text=FastTyping - Simple web app for typing practice&url=https://typingfast.vercel.com" target="_blank"><i title="Twitter X" class="icon icon-twitter"></i></a>
+          <a href="http://www.facebook.com/sharer/sharer.php?t=FastTyping - Simple web app for typing practice&u=https://typingfast.vercel.com" target="_blank"><i title="Facebook" class="icon icon-facebook"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://typingfast.vercel.com" target="_blank"><i title="LinkedIn" class="icon icon-linkedin"></i></a>
+        </div>
+      </main>
+
+      <footer>
+        &copy;2025 <a href="https://x.com/ndaidong" target="_blank">Dong Nguyen</a>
+        -
+        <a href="https://github.com/ndaidong/fast-typing" target="_blank">Source code</a>
+      </footer>
+
+      <div class="dialog-container" id="preferences" data-module="preferences">
+        <div class="dialog">
+          <div class="dialog-title">Preferences </div>
+          <div class="dialog-body">
+            <div id="prefBox"></div>
+          </div>
+          <div class="dialog-buttons">
+            <button class="mdl-button" id="btnSave">Save changes</button>
+            <button class="mdl-button close" id="btnCancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="/vendor/t3.min.js"></script>
+    <script src="/vendor/realdom.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
